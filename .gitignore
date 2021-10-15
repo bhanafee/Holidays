@@ -1,0 +1,6 @@
+# All hidden files...
+.*
+# ... except for this one
+!.gitignore
+# IntelliJ project files
+*.iml
