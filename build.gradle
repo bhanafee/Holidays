@@ -6,10 +6,9 @@ repositories {
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter:5.7.0'
+    implementation 'org.testng:testng:7.1.0'
 }
