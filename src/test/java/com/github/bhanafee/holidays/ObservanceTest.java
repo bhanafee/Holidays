@@ -31,10 +31,6 @@ public class ObservanceTest {
         assertEquals(result.get().getDate(), DATE, "Date should pass through");
     }
 
-    public void testNamedNullInput() {
-        assertEquals(named.apply(null), Optional.empty(), "Null input should produce empty output");
-    }
-
     public void testNamedNullName() {
         Function<Optional<LocalDate>, Optional<Observance>> test = Observance.named(null);
         final Optional<Observance> result = test.apply(Optional.of(DATE));
