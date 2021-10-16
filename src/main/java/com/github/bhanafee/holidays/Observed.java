@@ -21,6 +21,7 @@ public class Observed implements UnaryOperator<Optional<Observance>> {
     /** Default annotation applied to the base name of the observance.
      * @see Observance#getName()
      */
+    @SuppressWarnings("unused")  // Convenience for external API
     public static final String DEFAULT_ANNOTATION = "%s (Observed)";
 
     /**
@@ -32,11 +33,13 @@ public class Observed implements UnaryOperator<Optional<Observance>> {
     /**
      * For holidays that are observed on Monday when they fall on a Sunday.
      */
+    @SuppressWarnings("unused")  // Convenience for external API
     public static final Observed FOLLOWING_MONDAY = new Observed(TemporalAdjusters.next(MONDAY), SUNDAY);
 
     /**
      * For holidays that are observed on Friday when they fall on a Saturday.
      */
+    @SuppressWarnings("unused")  // Convenience for external API
     public static final Observed PREVIOUS_FRIDAY = new Observed(TemporalAdjusters.previous(FRIDAY), SATURDAY);
 
     private static UnaryOperator<String> formatter(final String format) {
