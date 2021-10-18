@@ -43,12 +43,12 @@ public class US {
 
     /**
      * Memorial Day, the last Monday in May.
-     * First observed in 1868.
+     * Observed May 30 from 1868 to 1970, last Monday in May thereafter
      *
      * @return Observances of Memorial Day.
      */
     public Function<Integer, Optional<Observance>> memorialDay() {
-        //FIXME observed on May 30 from 1868 to 1970, last Monday in May thereafter
+        //FIXME observe on May 30 from 1868 to 1970
         return new Yearly(Month.MAY, -1, DayOfWeek.MONDAY, 1868).andThen(Observance.named("Memorial Day"));
     }
 
