@@ -8,6 +8,9 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 
+/**
+ * Generate observances that are a fixed number of days from another observance.
+ */
 public class Offset implements UnaryOperator<Optional<Observance>> {
     private final Predicate<Observance> shifts;
     private final TemporalAdjuster adjustment;
